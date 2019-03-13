@@ -12,6 +12,8 @@ const viewPath = path.join(__dirname, '../templates/views');
 const partialPath = path.join(__dirname, '../templates/partials');
 
 const name = 'LukeGibran';
+const port = process.env.PORT || 3000;
+
 app.set('view engine', 'hbs');
 app.set('views', viewPath);
 
@@ -85,6 +87,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('listening on port 3000');
+app.listen(port, () => {
+  console.log(`listening on port ${port}`);
 });
